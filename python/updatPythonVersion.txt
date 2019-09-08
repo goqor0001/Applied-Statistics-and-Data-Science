@@ -1,0 +1,7 @@
+update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+
+python --version
+
+//Already you can easily change python version by
+update-alternatives --list python
