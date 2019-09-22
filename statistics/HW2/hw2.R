@@ -77,3 +77,20 @@ par(new=T)
 hist(y, col = alpha("red", 0.5), xlim = c(0, 350), ylim = c(0, 100))
 #we can conclude that if Diet = 1 its frequency id higher
 
+
+#3.c
+
+stem(iris$Petal.Length)
+stem(iris$Petal.Length, 0.5)
+stem(iris$Petal.Length, 2)
+stem(iris$Petal.Length, 4)
+
+
+par(mfcol = c(1,2))
+x3_axis = rnorm(10)
+plot.new()
+out <- capture.output(stem(iris$Petal.Length), family = "mono")
+text(0,1, paste(out, collapse='\n'), adj=c(0,1) )
+hist(iris$Petal.Length)
+
+
