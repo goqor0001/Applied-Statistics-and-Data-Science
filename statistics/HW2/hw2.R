@@ -109,3 +109,155 @@ adj = data5$Adj.Close
 hist(adj)
 #in the 100th week it has a lot of return but after that it is lower
 
+#6.e
+
+wins_mean <- function(x, p) {
+  n = length(x)
+  if(2*p > n) {
+    print("enter correct input")
+    return(0)
+  }
+  y = sort(x)
+  for(i in 1:p) {
+    y[i] = y[p+1]
+    y[n-i+1] = y[n-p]
+  }
+  return(mean(y))
+}
+
+print(wins_mean(c(-100, 3, 5), 1))
+
+#6.f
+x6f <- c()
+for(i in 1:(length(ChickWeight$Diet))) {
+  if(ChickWeight$Die[i] == 1) {
+    x6f <- c(x6f, ChickWeight$weight[i])
+  }
+}
+mean(x6f)
+
+x6f2 <- c()
+for(i in 1:(length(ChickWeight$Diet))) {
+  if(ChickWeight$Die[i] == 2) {
+    x6f2 <- c(x6f2, ChickWeight$weight[i])
+  }
+}
+mean(x6f2)
+#there is no randomness and we can conclude that first diet is more efficient
+
+#7.d
+head(mtcars)
+
+mtcars$cyl
+x7d = c()
+y7d = c()
+z7d = c()
+
+for(i in 1:length(mtcars$cyl)) {
+  if(mtcars$cyl[i] == 4) {
+    x7d <- c(x7d, mtcars$mpg[i])
+  }
+  if(mtcars$cyl[i] == 6) {
+    y7d <- c(y7d, mtcars$mpg[i])
+  }
+  if(mtcars$cyl[i] == 8) {
+    z7d <- c(z7d, mtcars$mpg[i])
+  }
+}
+
+sd(x7d)
+sd(y7d)
+sd(z7d)
+#the most is 4 cyl then 8 cyl and the least is 6 cyl
+
+#7.e
+head(iris)
+max(iris$Petal.Width)
+min(iris$Petal.Width)
+max_sp <- c()
+min_sp <- c()
+for(i in 1:length(iris$Petal.Width)) {
+  if(iris$Petal.Width[i] == max(iris$Petal.Width)) {
+    #print(iris$Species[i])
+    max_sp <- c(max_sp, iris$Species[i])
+    print(max_sp)
+  }
+  if(iris$Petal.Width[i] == min(iris$Petal.Width)) {
+    min_sp <- c(min_sp, iris$Species[i])
+  }
+}
+print(max_sp)
+print(min_sp)
+
+#7.f
+mad(cars$dist)
+?mad
+mad(cars$dist, center = mean(cars$dist))
+
+mad1 <- function(x) {
+  x_bar = mean(x)
+  mad1 = (sum(abs(x - x_bar)))/length(x)
+  return(mad1)
+}
+mad1(cars$dist)
+
+mad2 <- function(data7) {
+  x_bar = median(data7)
+  mad1 = (sum(abs(data7 - x_bar)))/length(x)
+  return(mad1)
+}
+mad1(cars$dist)
+
+#they are not the same I do not know why
+
+#8.c
+x = c(-6, 15, 0, 5, 17, -4, 1, -9, -9, 13)
+y = c(0.0, 3.6, 2.7, -1.5, 5.7, 1.5, -3.0, 4.5, 6.0)
+quantile(x)
+quantile(y)
+
+
+quar = function(x) {
+   x <- sort(x)
+  q1 = 0
+  q2 = 0
+  q3 = 0
+  n = length(x)
+  m = floor(n/2)
+  if (n%%2 == 0) {
+    q2 = (x[m] + x[m+1])/2
+    q1 = 0
+    q3 = 0
+    if (m%%2 == 0) {
+      k = floor(m/2)
+      q1 = (x[k] + x[k+1])/2
+      q3 = (x[m+k] + x[m+k+1])/2
+      
+    } else {
+      k = floor(m/2)
+      q1 = x[k+1]
+      q3 = x[m+k+1]
+    }
+  } else {
+    q2 = x[m+1]
+    q1 = 0
+    q3 = 0
+    if ((m+1)%%2 == 0) {
+      k = floor((1+m)/2)
+      q1 = (x[k] + x[k+1])/2
+      q3 = (x[m+k] + x[m+k+1])/2
+      
+    } else {
+      k = floor(m/2)
+      q1 = x[k+1]
+      q3 = x[m+k+1]
+    }
+  }
+  return(c(q1, q2, q3))
+  
+}
+quar(x)
+sort(x)
+quar(y)
+sort(y)
+#finaly  endddd:)
