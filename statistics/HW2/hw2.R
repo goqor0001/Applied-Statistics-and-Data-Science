@@ -93,4 +93,19 @@ out <- capture.output(stem(iris$Petal.Length), family = "mono")
 text(0,1, paste(out, collapse='\n'), adj=c(0,1) )
 hist(iris$Petal.Length)
 
+#4.a
+
+x4 = c(0, 3, 4, 5, -1)
+y4 = c(2, -1, 2, 5, 2)
+plot(x4, y4)
+
+#4.b
+plot(pressure$temperature, pressure$pressure)
+
+#5
+data5 = read.csv("/home/grigor/Applied-Statistics-and-Data-Science/statistics/HW2/AAPL.csv")
+head(data5)
+adj = data5$Adj.Close
+hist(adj)
+#in the 100th week it has a lot of return but after that it is lower
 
