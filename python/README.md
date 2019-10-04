@@ -12,3 +12,10 @@ Here are python scripts for ASDS python howework
       input: json file which contains informaion about cities
       output: print the maping and good cities
 
+4. Drawing a tonacar
+      input: two integers
+      output tonacar
+
+5. cityDesc.py print the longest sentence in the description of Amsderdam
+      input: None
+      output: longest sentence and its length
