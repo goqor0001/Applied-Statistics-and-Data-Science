@@ -1,0 +1,285 @@
+---
+title: "R_HW01"
+author: "Grigor Keropyan"
+date: "12 11 2019"
+output: html_document
+---
+
+
+```{r, echo=FALSE}
+```
+
+
+```{r}
+# Task2
+#a.
+a <- 25
+pi <- 3.14
+log(x=((sin(pi/2)+exp(1))/sqrt(a))*20^10, base = 2)
+```
+
+```{r}
+# Task2
+
+# b.
+x <- seq(from=151.5, to=9, by=-1.5)
+head(x,5)
+
+y_bar<-rep(x=c(5,8,-5), each=2)
+y<-rep(y_bar,time=length(x)/(2*length(y_bar)))
+
+length(x)
+length(y)
+```
+
+```{r}
+# Task2
+
+# c.
+mean(x)
+y[length(y)+1]<-mean(x)
+y
+z<-x*y
+z
+
+# the lengths of x and y are not the same
+
+```
+
+```{r}
+# Task2
+
+# d.
+z[c(29,51,61,78)]
+z[c(29,51,61,78)]<-c(0,1)
+z
+
+# we just overwrite some elementys
+```
+
+```{r}
+# Task2
+
+# e.
+z_bar <- z[z>=1000]
+z_bar
+
+length(z[z>=1000])
+
+```
+
+```{r}
+# Task3
+
+# a.
+mtx1 <- matrix(data = c(1,2,2,1,3,3,0,1,2), nrow = 3, ncol = 3, byrow = F)
+mtx2 <- matrix(data = c(1, 0, 2 , 1,1,0), nrow = 3, ncol = 2, byrow = T)
+mtx1
+mtx2
+
+mtx_mult <- (1/2)*mtx1%*%mtx2
+mtx_mult
+
+dim(mtx_mult)
+
+# mtx1%*%mtx2!=mtx2%*%mtx1 because right side does not exist but left is!
+
+#mtx2%*%mtx1
+
+```
+
+```{r}
+# Task 3.
+# b.
+
+subC <- mtx_mult[2:3,]
+subC
+
+t(subC)
+```
+
+```{r}
+# Task 3.
+# c.
+
+typeof(subC)
+is.matrix(subC)
+is.numeric(subC)
+```
+```{r}
+# Task 3.
+# d.
+
+diag(subC)<-0
+subC
+```
+
+```{r}
+# Task 3.
+# e.
+
+subC_inverse <- solve(subC)
+subC_inverse
+
+subC%*%subC_inverse==subC_inverse%*%subC
+subC_inverse%*%subC==diag(2)
+```
+
+```{r}
+# Task 4.
+# a.
+
+x <- seq(from=151.5, to=9, by=-1.5)
+y_bar<-rep(x=c(5,8,-5), each=2)
+y<-rep(y_bar,time=length(x)/(2*length(y_bar)))
+
+L<-list(x,y,subC,array(data = c(x,y), dim = c(1,29,5)))
+L
+
+```
+
+```{r}
+# Task 4.
+# b.
+adj<-L[[1]]-mean(L[[2]])
+adj
+
+```
+
+```{r}
+# Task 4.
+# c.
+L<-list(x,y,subC,array(data = c(x,y), dim = c(1,29,5)))
+L_new<-L[c(-2,-3)]
+L_new
+length(L_new)
+
+names(L_new)<-c("Vector", "array")
+L_new
+```
+
+```{r}
+# Task 4.
+# d.
+dframe<-data.frame(Name=c("Eric Clapton","Jimi Hendrix","Joe Satriani","Steven Vai","Orianthi Paraganis","Lita Ford"),Gender=c("M","M","M","M","F","F"), Rating=c("High","Med","Love","High","Low","Low"))
+dframe
+
+newdata<-data.frame(Year=c(1945,1942,1956,1960,1985,1958))
+dframe_new<-cbind(dframe,newdata)
+dframe_new
+
+structure(dframe_new)
+
+```
+
+
+```{r}
+# Task 4.
+# e.
+
+2019 - dframe_new$Year[2]
+age<-data.frame(age=2019 - dframe_new$Year)
+age
+
+dframe_new<-cbind(dframe_new,age)
+structure(dframe_new)
+
+dframe_new$age[dframe_new$Name=="Jimi Hendrix"]<-" "
+
+structure(dframe_new)
+```
+
+
+```{r}
+# Task 4.
+# f.
+
+new<-data.frame(Name="Chgitem",Gender="M",Rating="Low",Year="1940",age=2019-1940)
+dframe_new<-rbind(dframe_new,new)
+
+structure(dframe_new)
+```
+
+
+```{r}
+# Task 4.
+# g.
+
+tail(dframe_new,5)
+
+DF<-dframe_new
+L[[length(L)+1]]<-DF
+L
+
+dframe_new$Name[dframe_new$Gender=="F"]
+
+```
+```{r}
+# Task 5.
+
+install.packages("kableExtra")
+library(knitr)
+library(kableExtra)
+```
+
+
+```{r}
+# Task 5.
+
+kable(dframe_new)
+dframe_new %>%
+  kable() %>%
+  kable_styling()
+```
+
+
+```{r}
+# Task 5.
+
+kable(dframe_new) %>%
+  kable_styling("striped", full_width = F) %>%
+  column_spec(1:5, color = "black") %>%
+  row_spec(5:7, bold = T, color = "red", background = "pink") %>%
+  row_spec(1:3,color = "black", background = "lightgray") %>%
+  row_spec(0, angle = 13)
+
+```
+I could write here all my comments, but it was more convenient to write in chunks
+```{r}
+# Task 6.
+
+# a. Three assignment operators in R <-,=,<<- (or ->>).  <- and =   are almost the same. <- we can use anywhere, but = not
+# example:
+f<-runif(20)
+g<-3*x + runif(20)
+# <<- and ->> operators can be used in functions.
+
+
+# b. data frame is convinient to have different type of parameters and we can reilize real data.
+
+
+# c. 4out  of Diag: 1.extracting  the diagonal, 2. for identity matrix 3. scalar return identity with size of scalar 4. returns matrix with diagonal specified entries and others zero
+
+
+# d. echo = FALSE prevents code. R Markdown runs code in the chunk, and the result can be used by other chunks. 
+
+
+# e. For example we have: 
+#[1] 100 200 2 3 here [1] represents the first index of the line of our output 
+#[5] 1000 8 9 60
+# 100 is the first one [1], 200 is 2nd [2],...1000 is [5]
+
+
+# f. list can keep any type of data, data frame is for structured data and also keep diverse types. array keeps all the same type
+
+# g.
+# IT is a lotttttttttttt :)
+```
+
+
+
+
+
+
+
+
