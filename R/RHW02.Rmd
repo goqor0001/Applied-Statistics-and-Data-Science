@@ -1,0 +1,207 @@
+---
+title: "Homework Assignment 2"
+author: "Grigor Keropyan"
+date: |
+  `r format(Sys.time(), '%B %d, %Y')` 
+output: 
+  html_document:
+    toc: TRUE
+    toc_depth: 4
+    toc_float: true
+    toc_collapse: true
+    theme: cerulean
+---
+  
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = T, include = T)
+```
+
+***
+
+# Requirements 
+  
+**File format:** *For this Homework, you are required to submit both R Markdown and __HTML__ files with your answers and codes in it. Make sure that Rmd file works, so that there won't be any errors when it is run and represent the same information as HTML. Under each question (not in comments) write the code along with your interpretations. Be sure to put your name at the top of your assignment (in the YAML header in front of the author).*
+
+**Due date:** *07.11.19 23:55. No late homework will be accepted.*
+
+**Submission:** *You need to submit files in <b>private</b> [GitHub repository](https://help.github.com/en/articles/create-a-repo) and [share](https://help.github.com/en/articles/inviting-collaborators-to-a-personal-repository) with [me](https://github.com/Zilfimian). Then, add the link to your repository in the file created on Google Drive (Submitted HW) or share on Slack.*
+
+**Rule of thumb:** *If the number of data points is greater than 100, do not print the whole data. Use subsets. Try to show all outputs (do not just store object as a variable). Also, try to avoid using the same name for variables in the file.*
+
+**Cheating:** *The purpose of tasks is to check your knowledge (rather than the ability of thinking). Please, try to solve without googling __every__ exercise. Try not to discuss with your classmates and work only on your file. Any similarities, which can be considered as cheated, will not be graded.*
+
+***
+
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 30px;}
+</style>
+
+
+# Task 1 (2 points): Special and Non-Numeric Values (and something more)   
+
+<div class = "blue">
+
+**These tasks should be done without loops and statements.**
+
+**Consider the dataset below (do not make any changes in the code of creating this data).** 
+
+```{r include=FALSE}
+(PlayList <- data.frame(
+  performedby = c("Kavitch", "Kavitch", "Chopin", "Billie Eilish", "Noize MC", "Sia", "Scorpions", "Joe Satriani", "Joe Satriani", "Sia", "Noize MC", "Yiruma", "Nirvana", "Yiruma", "Kaleo", "Yiruma"),
+  genre = factor(c("Alternative Rock", "Alternative Rock", "Classic", "Pop", "Rock", "Pop", "Hard Rock", "Instrumental Rock", "Instrumental Rock", "Pop", "Rock", "Classic", "Alternative Rock", "Classic", "Alternative Rock", "Classic")),
+  duration = c(3.39, 4.45, 3.20, 5.07, 3.41, 4.48, 2.43, 5.32, 3.52, 4.17, 7.50, 4.39, 3.51, 3.34, 3.52, 3.34),
+  repetition = c(NaN, 5, Inf, 2, 7, NaN, 2, 3, NA, 2, 1, NA, 3, 4, Inf, 6),
+  include = c(rep(T, 6), F, F, F, rep(T, 7) ), stringsAsFactors = F
+    )
+  )
+```
+
+```{r echo=FALSE}
+head(PlayList)
+```
+
+**The dataset represents the subset of playlist. The description of the data is here:**
+
+* performedby - The track is performed by the mentioned group or artist.
+* genre - The (approximate) genre of the track.
+* duration - The duration of the track in the format - min.sec.
+* repetition - The number of times I repeat the track during a week.
+* include - Whether the track is included in my new phone or not. 
+
+a. Are the types of variables correct? If not, make appropriate changes. Why does the variable `genre` have represented class if there is an optional argument in the function `data.frame()`?
+
+
+b. Show the subset of the data (only names of performers and repetition times), which does not contain tracks that are repeated infinite times or if the repetition time is not available. **Note,** that *not available* does not mean *not a number*. Which rows contain these tracks? Use is.*functions*() for the task.
+
+c. Output all performers with corresponding durations of tracks, which repetition, when `repetition` are raised to a power of 1000, is **NOT** infinite. Show the repetition times of whose tracks after "powering".
+
+d. Recently I added the strangest song from Eminem - Stan to my playlist. Combine this song with the original data with its appropriate genre and duration. **Note:** the genre of this track is *"Rap"*.  Also **note** that types of variables should not be changed (and do not use explicit coercion!).
+
+e. After having a problem with the memory of my new phone I deleted some songs, see the variable `include`. Make appropriate changes in the data (to obtain the new playlist) and in the categories of the variable `genre`. Show the changes.
+
+f. Find the name of the artist/group, whose track is played the most times (finite). How many seconds do I listen to him? Pay attention to the format of the variable `duration`.
+
+</div>
+
+<br>
+
+## Solution 1
+```{r}
+#a.
+str(PlayList)
+PlayList$performedby<-as.factor(PlayList$performedby)
+str(PlayList)
+#b.
+PlayList[which(!is.na(PlayList$repetition) & !is.infinite(PlayList$repetition)), c(1,4)]
+
+#c.
+p = PlayList[which(!is.infinite(PlayList$repetition ** 1000)), c(1, 4)]
+q = '^'(p$repetition, 1000)
+p$repetition = q
+p
+
+#d.
+new_row<-data.frame("performedby"="Eminem","genre"="Rap","duration"=NA,"repetition"=NA,"include"=NA)
+PlayList <- rbind(PlayList,new_row)
+PlayList
+
+#e
+table(PlayList$genre)
+newplaylist<-PlayList[PlayList$include==T,]
+table(newplaylist$genre)
+
+#f
+PlayList <- PlayList[complete.cases(PlayList$repetition),]
+nor<-PlayList[!is.infinite(PlayList$repetition) ,]
+rownames(nor)<-NULL
+nor[nor$repetition==max(nor$repetition),]
+
+```
+
+***
+
+# Task 2 (5 points): Functions, statements, and loops.
+
+<div class = "blue">
+
+a. Create a function that takes any x matrix as an argument and returns vector containing the sums of each column of the matrix. Show the result of your function using the following matrix:
+
+$$
+\left(\begin{array}{cc} 
+1 & 2 & 3\\
+4 & 5 & 6
+\end{array}\right)
+$$ 
+
+*Compare* your results by calculating the column sums with the function `colSums()`.
+
+b. Create a function that takes a data frame as an argument and returns the vector with each variable name and its class (as one element of the vector): e.g. age is numeric. Do not use implicit looping functions.
+ 
+c. Write R function called "mis.ps" to return the positions of the missing values. The created function should take **variable** as an argument and return the vector of the positions of the missing values or not a number values with the following possible outcomes:
+
+```
+[1] "The positions of NAs and NaNs for the chosen variable are 8,76,133,139,162,165,186"
+or
+[1] "The variable does not have NA or NaN"
+or
+[1] "The position of NA or NaN for the chosen variable is 2"
+```
+
+d. R does not have a standard built-in function to calculate the mode of a sequence. Create a function that takes vector x as an argument and returns the mode of the sequence. **Note (1):** be attentive to sequences which are not unimodal. **Note (2):** :)
+
+e. Create the function "repl.mis" that takes the data frame as an argument and replaces the missing values 
+
+* for **numeric variable** with the value in the vectors immediately before the missing value. The first observation's `NA` should be replaced by the average value of the corresponding variable (only finite values), but the warning message about this replacement should be seen. 
+
+* for **logical variables** return the same sequence.
+
+* for **categorical variables** with the mode of variable. If the variable has more than 1 modes, replace `NA` with the first mode and show the information about it.
+
+The output of the function should be **the data**. Use *looping function* to choose the specific type of variable.
+
+**Note:** For simplicity, consider both NA-s and NaN-s as not available.
+
+f. Show **all** possible results of functions above by using the dataset `PlayList`. 
+
+g. Use implicit looping function for solving the task 2-b (the result should be **the same**).
+
+</div>
+
+<br>
+
+## Solution 2
+```{r}
+#a.
+
+```
+
+
+***
+
+# Task 3 (1 point): Questions
+
+<div class = "blue">
+
+ a. Do the functions `is.infinite()`, `is.finite()` distinguish between possitive or negative infinity? 
+ 
+ b. What is the difference among the special values `NaN`, `NULL`, and `NA` in R (do not just open the abbreviations)? When is it common to use `NULL`? When `NA`?
+ 
+ c. What is the coercion? How many types of coercion does R have? Bring examples of each one.
+ 
+ d. Is there any difference between using `return` in the user-defined function or not (bring an example).
+ 
+ e. Why do we need to use the function `ifelse` if we already have the statement `if (else if) else`?
+ 
+ e. How to call the functions with the same name from different packages. Bring an example. How to check and change the order of package with the same functions? 
+
+ f. Is there any problem with using the function `attach()`? Why?
+
+ g. Bring an example of a disposable function.
+ 
+ h. How much time did it take you to accomplish the HW?
+ 
+ 
+</div> 
+
+## Solution 3
