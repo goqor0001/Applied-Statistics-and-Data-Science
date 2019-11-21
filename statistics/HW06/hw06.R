@@ -63,7 +63,7 @@ qqnorm(cc)
 #We can infer if dwgrees of freedom is large then it is almost the standart normal
 curve(dchisq(x, 300), from = -500, to = 500, col = "red", 
       xlab = "quantile", ylab = "density", lwd = 2)
-curve(dchisq(x, 30), from = -500, to = 500, col = "orange", 
+curve(dchisq(x, 30), from = -500, to = 500, col = "orange", add=T
       xlab = "quantile", ylab = "density", lwd = 2)
 curve(dchisq(x, 10), from = -500, to = 500, col = "dark green", add = TRUE, lwd = 2)
 curve(dchisq(x, 5), from = -500, to = 500, col = "sky blue", add = TRUE, lwd = 2)
@@ -71,4 +71,16 @@ curve(dchisq(x, 1), from = -500, to = 500, col = "grey40", add = TRUE, lwd = 2)
 legend("topleft", legend = paste0("DF = ", c(300, 1, 5, 10, 30)),
        col = c("red", "grey40", "sky blue", "dark green", "orange"),
        lty = 1, lwd = 2)
+
+
+
+a = rnorm(10000)
+b = rnorm(10000)
+c = rnorm(10000)
+d = rnorm(10000)
+xx = a**2 + b**2 + c**2 + d**2
+plot(density(xx))
+curve(dchisq(x, df=4), from = -5, to = 25, add=T, col='red')
+#alomost the same
+
 
