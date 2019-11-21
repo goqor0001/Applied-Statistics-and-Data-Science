@@ -34,5 +34,41 @@ cis
 
 
 #4.e
+ci.bernoulli <- function(x, a) {
+   
+}
 
+
+#5
+curve(dt(x, 30), from = -5, to = 5, col = "orange", 
+      xlab = "quantile", ylab = "density", lwd = 2)
+curve(dt(x, 10), from = -5, to = 5, col = "dark green", add = TRUE, lwd = 2)
+curve(dt(x, 5), from = -5, to = 5, col = "sky blue", add = TRUE, lwd = 2)
+curve(dt(x, 1), from = -5, to = 5, col = "grey40", add = TRUE, lwd = 2)
+curve(dnorm(x), from=-5, to=5, col='red', add=T, lwd=2)
+legend("topleft", legend = paste0("DF = ", c(1, 5, 10, 30)),
+       col = c("grey40", "sky blue", "dark green", "orange"),
+       lty = 1, lwd = 2)
+
+
+aa = rt(1000, df=3)
+qqnorm(aa)
+
+bb = rt(1000, df=15)
+qqnorm(bb)
+
+cc = rt(1000, df=30)
+qqnorm(cc)
+
+#We can infer if dwgrees of freedom is large then it is almost the standart normal
+curve(dchisq(x, 300), from = -500, to = 500, col = "red", 
+      xlab = "quantile", ylab = "density", lwd = 2)
+curve(dchisq(x, 30), from = -500, to = 500, col = "orange", 
+      xlab = "quantile", ylab = "density", lwd = 2)
+curve(dchisq(x, 10), from = -500, to = 500, col = "dark green", add = TRUE, lwd = 2)
+curve(dchisq(x, 5), from = -500, to = 500, col = "sky blue", add = TRUE, lwd = 2)
+curve(dchisq(x, 1), from = -500, to = 500, col = "grey40", add = TRUE, lwd = 2)
+legend("topleft", legend = paste0("DF = ", c(300, 1, 5, 10, 30)),
+       col = c("red", "grey40", "sky blue", "dark green", "orange"),
+       lty = 1, lwd = 2)
 
