@@ -173,6 +173,92 @@ g. Use implicit looping function for solving the task 2-b (the result should be 
 ## Solution 2
 ```{r}
 #a.
+f1 <- function(m) {
+  return (apply(m, 2, sum))
+}
+m1 = matrix(seq(from=1, to=6, by=1), byrow=T, ncol=3)
+s = f1(m1)
+s == colSums(m1)
+
+#b.
+my.data <- data.frame(y=rnorm(5), 
+                      x1=c(1:5), 
+                      x2=c(TRUE, TRUE, FALSE, FALSE, FALSE),
+                      X3=letters[1:5])
+data_types <- function(frame) {
+  res <- lapply(frame, class)
+  res_frame <- data.frame(unlist(res))
+  return (res_frame)
+}
+data_types(my.data)
+
+#c.
+mis.ps <- function(v) {
+  nai = which(is.na(v))
+  if (length(nai) == 0) {
+    cat("The variable does not have NA or NaN")
+  } else if(length(nai) == 1) {
+    cat("The position of NA or NaN for the chosen variable is ", nai[1])
+  } else {
+    cat("The positions of NAs and NaNs for the chosen variable are ", nai)
+  }
+}
+my.data
+my.data$y[2] = NaN
+my.data$x1[3] = NA
+my.data
+
+mis.ps(my.data)
+
+#d.
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+v1 = c(1, 1, 2, 2, 30)
+getmode(v1)
+
+#e.
+repl.mis <- function(df) {
+  for (i in colnames(df)) {
+    v = df[[i]]
+    if(is.numeric(v)) {
+      if(is.na(v[1])) {
+        df[[i]][1] = mean(v[!is.na(v)])
+      }
+      for (j in 2:length(v)) {
+        
+        if(is.na(v[j])) {
+          
+          df[[i]][j] = v[j-1]
+        }
+      }
+    } else if(is.logical(v)) {
+      df[[i]][j] = T
+    } else {
+      df[[i]][j] = getmode(v)
+    }
+  }
+  return (df)
+}
+da <- data.frame(y=rnorm(5), 
+                      x1=c(1:5), 
+                      x2=c(TRUE, TRUE, FALSE, FALSE, FALSE),
+                      X3=letters[1:5])
+da
+da$y[1] = NaN
+da$x1[3] = NA
+da$x2[4] = NaN
+da$X3[3] = NA
+da
+re = repl.mis(da)
+re
+
+#f.
+mis.ps(PlayList)
+repl.mis(PlayList)
+
+#g.
 
 ```
 
@@ -203,5 +289,113 @@ g. Use implicit looping function for solving the task 2-b (the result should be 
  
  
 </div> 
+```{r}
+#a.
+#Yes they distinguish and return -Inf in the case of negative and Inf in the cas of positive
+
+#b
+#NULL is for instance when a function return nothing. NAN is a logical vector of length one for numerical values. And finally NA is logical constant which is an indicator ofd missing values.
+
+#c
+# All the data in an atomic vector must be of the same mode
+# If data are added so that modes are mixed, then the whole vector gets changed so that everything is of the most general mode
+# Example:
+# 
+# # simple atomic vector of mode numeric
+# x <- 1:6
+# x
+# #> [1] 1 2 3 4 5 6
+# 
+# # now change one to mode character and see what happens
+# x[1] <- "tweezer"
+# x
+# #> [1] "tweezer" "2"       "3"       "4"       "5"       "6"
+# Coercion Up One Step
+# logical to numeric:
+# TRUE ==> 1
+# FALSE ==> 0
+# numeric to complex:
+# 6.4 ==> 6.4+0i
+# 5 ==> 5+0i
+# complex to character:
+# 6.4+0i ==> "6.4+0i"
+# Coercion Up Two Or More Steps
+# Note that the coercion sometimes “jumps over the intermediate steps”
+# 
+# logical to complex
+# TRUE ==> 1+0i
+# FALSE ==> 0+0i
+# logical to character (it does not go FALSE ==> 0 ==> “0”)
+# TRUE ==> "TRUE"
+# FALSE ==> "FALSE"
+# numeric to character
+# 7 ==> "7"
+# 3.1415 ==> "3.1415"
+# Coercion down one step
+# Sometimes things get coerced “downards” (i.e., toward less general data types).
+# 
+# If the coercion doesn’t make sense you end up with NA which is how R denotes missing data
+# 
+# numeric to logical (0 ==> FALSE, anything else ==> TRUE); Always “makes sense”
+# 0 ==> FALSE
+# 1 ==> TRUE
+# 78.2 ==> TRUE
+# 0.0001 ==> TRUE
+# -563.3 ==> TRUE
+# complex to numeric (discards complex part and warns about it!)
+# 3.4+0i ==> 3.4
+# 5.6+7.6i ==> 5.6 (+ a warning)
+# 
+# # witness a warning:
+# as.numeric(7.4+5i)
+# #> Warning: imaginary parts discarded in coercion
+# #> [1] 7.4
+# character to complex
+# "3.4+4i" ==> 3.4+4i
+# "a" -> NA (you can’t coerce "a" to any number, reasonably)
+# Coercion down more than one step
+# Important point: it doesn’t necessarily go through intermediate steps:
+# 
+# complex to logical (0 ==>FALSE, anything else ==> TRUE)
+# 0+0i ==> FALSE
+# 0+2i ==> TRUE
+# 5+0i ==> TRUE
+# 5+9i ==> TRUE
+# character to logical
+# "TRUE" ==> TRUE
+# "FALSE" ==> FALSE
+# "1" ==> NA (yikes! if it went through numeric you’d get something different!)
+# "0" ==> NA
+# character to numeric
+# "56.764" ==> 56.764
+# "4+8i" ==> 4 (with a warning that the complex part was dropped)
+# "fred" -> NA
+# Functions For Explicit Coercion
+# There is a whole family for coercing objects between different modes (or different types) that take the form as.something:
+# 
+# as.logical(x)
+# as.numeric(x)
+# as.integer(x) # not a mode, (this is a subclass of the numeric mode)
+# as.complex(x)
+# as.character(x)
+# As expected, these are vectorized—they coerce every element of the vector to the desired mode.
+
+#d
+# yes there is difference. if user defined function return some values we can use it otherwise it is not possoibl.
+# weird quesion is d. maybe I didnot understand)))
+
+#E
+#to be concise
+
+#e
+#pakache1::f and packacge2::f
+
+#f
+#Yes. Attched names can also be local variables and they will have the same name and booooom:)
+
+#H
+#It takes a lot
+
+```
 
 ## Solution 3
