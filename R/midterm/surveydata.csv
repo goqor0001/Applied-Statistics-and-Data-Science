@@ -1,0 +1,141 @@
+ID,TT,Survey Date,Pre_P1,Pre_P3,Pre_P4,Pre_P6,Pre_P7,Pre_P9,Post_P1,Post_P3,Post_P4,Post_P6,Post_P7,Post_P9,income,spendings,P2_day,P2_month,P2_Year
+1,C,"4,..4-2019",1,7,Satisfactory,1,7,1,1,7,Satisfactory,Vocational,7,1,407.8580514,253.9586791,23,4,2000
+2,C,"4,.)4-2019",1,100,Excellent,2,6,3,1,8,Excellent,Vocational,6,5,390.0476814,233.7717102,5,5,2002
+3,C,"4,..4-2019",1,9,Excellent,1w,3,1,1,9,Excellent,Secondary school (1-10 years),3,1,402.2571596,248.5423451,15,11,2001
+4,C,"4,..4-2019",1,9,Excellent,2,3,1,1,9,Excellent,Vocational,3,1,398.1848421,242.2722815,7,1,2002
+5,C,"4,..4-2019",1,7,Satisfactory,2,5,2,1,7,Satisfactory,Vocational,5,2,397.3437505,245.9658372,21,8,2000
+6,C,"4,.--4-2019",1,9,Excellent,2,6,2,1,9,Excellent,Vocational,6,3,405.0080397,252.898366,13,11,2000
+7,C,"4,..4-2019",2,9,Excellent,2,5,1,2,9,Excellent,Higher education,5,1,389.5407366,229.9194486,17,12,2001
+8,C,"4,..4-2019",2,99,100,1,5,1,2,6,Fair,Secondary school (1-10 years),5,2,393.4723668,243.7329846,10,12,2002
+9,C,"4,.+4-2019",2,7,Satisfactory,3,3,1,2,7,Satisfactory,Vocational,3,1,408.041492,255.04943,21,6,2002
+10,C,"4,..4-2019",1,7,Satisfactory,2,4,1,1,7,Satisfactory,Vocational,4,1,411.6321123,269.0344839,3,3,2000
+11,C,"4,.)4-2019",1,7,Satisfactory,1,5,1,1,7,Satisfactory,Vocational,5,1,400.0117525,238.1600501,5,9,2002
+12,C,"4,..4-2019",1,8,Excellent,2,3,1,1,8,Excellent,Vocational,3,1,408.5821453,261.0270548,31,12,2001
+13,C,"4,..4-2019",1,99,Satisfactory,2w,5,1,1,6,Satisfactory,Vocational,5,1,397.5697012,256.9382977,15,10,2001
+14,C,"4,..4-2019",2,7,Satisfactory,3,7,1,2,7,Satisfactory,Higher education,7,1,402.2146501,268.3123727,30,9,2002
+15,C,"4,..4-2019",1,9,Excellent,2,5,1,1,9,Excellent,Vocational,5,1,400.4736485,262.6524591,28,6,2002
+16,C,"4,..4-2019",1,9,Excellent,2,4,2,1,9,Excellent,Vocational,4,2,398.5884048,244.6115668,1,6,2002
+17,C,"4,..4-2019",1,9,Excellent,3,6,1,1,9,Excellent,Higher education,6,1,402.9687125,243.6018536,7,9,2001
+18,C,"4,..4-2019",1,9,Excellent,2,6,1,1,9,Excellent,Vocational,5,2,400.5019219,257.6452207,11,8,2002
+19,C,"4,..4-2019",1,9,Excellent,2,7,2,1,9,Excellent,Vocational,7,2,411.4947875,273.8282837,4,1,2002
+20,C,"4,..4-2019",1,99,99,1,6,1,1,9,Excellent,Secondary school (1-10 years),6,1,399.689715,260.9568952,18,12,2002
+21,C,"4,..4-2019",1,6,Satisfactory,2,4,1,1,6,Satisfactory,Vocational,6,1,406.4534686,250.0853385,25,10,2000
+22,C,"4,..4-2019",1,8,Satisfactory,2,7,4,1,8,Satisfactory,Vocational,7,4,397.4069734,255.0900309,30,11,2000
+23,C,"4,..4-2019",1,9,Excellent,3w,5,2,1,9,Excellent,Higher education,5,2,400.9488183,248.1681704,3,10,2001
+24,C,"4,..4-2019",1,99,Satisfactory,99,6,5,1,6,Satisfactory,Secondary school (1-10 years),7,5,398.7412658,240.0734781,26,8,2000
+25,C,"4,..4-2019",2,7,Satisfactory,2,6,2,2,7,Satisfactory,Vocational,6,2,392.5114315,245.5565043,5,8,2001
+26,C,"4,..4-2019",1,8,Satisfactory,2,6,1,1,8,Satisfactory,Vocational,6,1,402.9979512,252.3764539,23,11,2001
+27,C,"4,..4-2019",1,8,Satisfactory,100,99,3,1,7,Satisfactory,Vocational,6,2,403.4449146,256.5850296, , , 
+28,C,"4,..4-2019",1,8,Excellent,2,5,1,1,9,Excellent,Vocational,5,2,397.5296161,243.1508567,20,7,2001
+29,C,"4,..4-2019",2,7,Satisfactory,1,6,1,2,7,Satisfactory,Secondary school (1-10 years),6,1,396.3022379,242.1903113,11,2,2001
+30,C,"4,..4-2019",2,7,Satisfactory,2,4,1,2,7,Satisfactory,Vocational,4,2,397.0645059,236.3519404,26,11,2003
+31,C,"4,..4-2019",2,7,Satisfactory,3,5,1,2,7,Satisfactory,Higher education,5,1,403.5935704,265.8732479,2,11,2002
+32,C,"4,..4-2019",2,6,Fair,2,4,1,2,6,Fair,Vocational,4,2,397.7604637,253.1216185,19,11,2001
+33,C,"4,..4-2019",2,8,Satisfactory,3,6,9,2,8,Satisfactory,Higher education,8,9,401.2367233,247.3437796,25,8,2002
+34,C,"4,..4-2019",1,5,Fair,1,5,2,1,6,Satisfactory,Secondary school (1-10 years),5,2,400.0312372,261.225677,8,5,2002
+35,C,"4,..4-2019",1,9,Excellent,3,4,1,1,9,Excellent,Higher education,4,1,399.2440232,248.3357133,3,4,2000
+36,C,"4,..4-2019",1,6,Satisfactory,2,4,4,1,99,Satisfactory,Vocational,4,5,393.6888492,247.932599,12,11,2001
+37,C,"4,..4-2019",1,8,Excellent,1,4,1,1,9,Excellent,Vocational,4,2,402.7343939,257.4827666,1,6,2001
+38,C,"4,..4-2019",2,9,Satisfactory,3,4,1,2,9,Satisfactory,Higher education,4,1,399.0635315,253.0486699,23,1,2002
+39,C,"4,..4-2019",1,8,Satisfactory,3,6,1,1,8,Satisfactory,Higher education,7,2,401.2413225,248.3284109,18,5,2001
+40,T2,"29,..4-2019",1,7,Excellent,1,6,2,1,8,Excellent,Secondary school (1-10 years),6,2,395.1917355,238.5562996, , , 
+41,T2,"29,..4-2019",1,8,Excellent,1,5,1,1,8,Excellent,Secondary school (1-10 years),5,1,402.8293413,236.0435049,4,6,2002
+42,T2,"29,..4-2019",1,8,Excellent,2,4,1,1,8,Excellent,Vocational,4,1,398.3533547,249.5073517,7,12,2001
+43,T2,"29,..4-2019",1,9,Excellent,1,7,1,1,9,Excellent,Secondary school (1-10 years),7,1,396.6358476,229.9685075,13,11,2001
+44,T2,"29,..4-2019",1,9,Excellent,,5,1,1,9,Excellent,Vocational,5,1,390.3314953,246.6918925,13,12,2002
+45,T2,"29,..4-2019",1,7,99,1,2,2,1,6,99,Secondary school (1-10 years),2,2,398.4633316,235.0960902,8,6,2003
+46,T2,"29,..4-2019",1,9,Excellent,3,5,3,1,9,Excellent,Higher education,5,3,388.7879696,244.3334099,21,11,2002
+47,T2,"29,..4-2019",1,8,Fair,3w,9,3,1,8,Excellent,Higher education,9,3,398.0149073,248.7038371,20,1,2002
+48,T2,"29,..4-2019",2,6,Satisfactory,2,100,100,2,7,Satisfactory,Vocational,99,5,401.2784946,234.4362229,1,12,2002
+49,T2,"29,..4-2019",2,6,Satisfactory,1,4,3,2,7,Satisfactory,Vocational,4,3,400.1862784,243.803635,4,12,2001
+50,T2,"29,..4-2019",2,6,Satisfactory,1,100,2,2,5,Fair,Secondary school (1-10 years),5,2,394.3303837,245.6864059,20,7,2002
+51,T2,"29,..4-2019",2,9,Excellent,3,4,2,2,9,Excellent,Higher education,4,3,404.8890215,261.426572,9,8,2002
+52,T2,"29,..4-2019",1,8,Excellent,99,5,1,1,8,Excellent,Vocational,5,1,405.4070346,250.9847068,11,4,2002
+53,T2,"29,..4-2019",1,8,Satisfactory,3,2,3,1,8,Satisfactory,Higher education,2,4,400.7469036,257.8542341,25,2,2003
+54,T2,"29,..4-2019",2,7,Satisfactory,2,3,1,2,7,Satisfactory,Vocational,3,1,402.1352863,258.5788883,24,8,2002
+55,T2,"29,..4-2019",2,7,Satisfactory,2,5,1,2,7,Satisfactory,Vocational,5,1,405.6425068,245.178008,11,12,2001
+56,T2,"29,..4-2019",1,9,Excellent,2,5,1,1,9,Excellent,Vocational,5,1,399.3684478,258.5642702,5,3,2002
+57,T2,"29,..4-2019",1,8,Excellent,3,3,6,1,9,Excellent,Higher education,3,6,395.6821202,257.0276857,20,9,2002
+58,T2,"29,..4-2019",2,7,Satisfactory,2,4,1,2,7,Satisfactory,Vocational,4,1,398.7741654,241.2890732,6,10,2002
+59,T2,"29,..4-2019",2,10,99,99,6,99,2,8,Excellent,Vocational,6,0,398.9063428,247.0509253,3,7,2002
+60,T2,"29,..4-2019",1,8,Satisfactory,2,5,1,1,8,Satisfactory,Vocational,5,1,403.6285491,258.3695083,18,11,2002
+61,T2,"29,..4-2019",1,7,Satisfactory,2,4,2,1,7,Satisfactory,Vocational,4,2,403.9762969,252.3484998,22,6,2002
+62,T2,"29,..4-2019",2,100,100,100,100,100,2,7,Satisfactory,Vocational,5,4,394.824861,238.7172618,28,9,2002
+63,T2,"29,..4-2019",2,6,Fair,100,6,2,2,5,99,100,99,2,395.8037571,237.2103773,6,10,2001
+64,T2,"29,..4-2019",1,9,Excellent,2,4,2,1,9,Excellent,Higher education,4,2,405.3073114,267.533207,1,11,2002
+65,T2,"29,..4-2019",1,8,Satisfactory,1,5,1,1,8,100,Secondary school (1-10 years),5,1,393.6233659,250.0232207,12,6,2002
+66,T2,"29,..4-2019",1,8,Satisfactory,2,3,1,1,8,Satisfactory,Vocational,3,1,396.7410014,245.5232378,9,2,2002
+67,T2,"29,..4-2019",1,7,Satisfactory,1,3,1,1,7,Satisfactory,Secondary school (1-10 years),3,2,400.2057738,244.074894,12,12,2002
+68,T2,"29,..4-2019",1,7,Satisfactory,2,5,1,1,7,Satisfactory,Higher education,5,2,404.5321844,249.3144283,6,11,2001
+69,T2,"29,..4-2019",1,8,Satisfactory,3,4,1,1,8,Excellent,Higher education,4,1,399.6233705,253.1269115,22,9,2002
+70,T2,"29,..4-2019",1,9,Excellent,2,5,3,1,9,Excellent,Vocational,5,3,401.5728248,260.4263172,1,5,2002
+71,T2,"29,..4-2019",1,8,Satisfactory,2,6,3,1,8,Excellent,Vocational,6,4,400.5820853,256.3454493,13,11,2002
+72,T2,"29,..4-2019",1,8,Excellent,3,3,1,1,8,Excellent,Higher education,3,1,404.0791352,270.7198245,10,6,2002
+73,T2,"29,..4-2019",1,9,Excellent,2,6,1,1,9,Excellent,Vocational,6,1,398.1118795,246.4258575,22,8,2002
+74,T2,"29,..4-2019",1,9,Excellent,2,6,2,1,9,Excellent,Vocational,6,2,402.0687627,252.8220773,23,8,2002
+75,T2,"29,..4-2019",1,9,Satisfactory,2,4,1,1,9,Satisfactory,Vocational,4,1,391.6537253,250.8961439,27,6,2002
+76,T2,"29,..4-2019",1,7,Satisfactory,1,5,1,1,8,Satisfactory,Vocational,5,1,400.252525,264.1484257,16,8,2001
+77,T2,"29,..4-2019",1,7,Satisfactory,2,3,2,1,8,Satisfactory,Vocational,2,2,401.6319874,225.3182453,25,4,2002
+78,T2,"29,..4-2019",1,8,Satisfactory,3,6,2,1,8,Satisfactory,Higher education,6,3,400.8394163,247.2782495,12,4,2003
+79,T2,"29,..4-2019",2,99,99,99,3,0,2,99,99,,3,0,400.9753108,248.1119753,4,3,2002
+80,T2,"29,..4-2019",2,8,Excellent,3,4,1,2,100,Excellent,Higher education,4,4,400.5505977,256.8122729,4,1,2002
+81,T2,"29,..4-2019",1,8,Excellent,2,4,3,1,8,Excellent,Vocational,4,3,403.3724846,253.4258142,24,9,2002
+82,T2,"29,..4-2019",1,8,Excellent,2,5,1,1,8,Excellent,Vocational,5,1,387.3639723,233.1806405,19,9,2002
+169,T1,"1,..4-2019",1,8,Satisfactory,2,5,3,1,8,Satisfactory,Vocational,5,3,400.3566845,263.8898325,13,1,2002
+170,T1,"1,..4-2019",1,99,Satisfactory,2,6,2,1,99,Satisfactory,Vocational,6,3,401.9991538,266.4828375,15,2,2002
+171,T1,"1,..4-2019",1,8,Excellent,1,4,0,1,8,Excellent,Secondary school (1-10 years),4,1,398.2007132,237.6075042,25,1,2000
+172,T1,"1,..4-2019",1,7,Satisfactory,2,5,1,1,8,Satisfactory,Vocational,5,1,404.3742285,268.8085903,13,3,2001
+173,T1,"1,..4-2019",2,7,Satisfactory,3,6,2,2,7,Satisfactory,Higher education,6,2,405.4821138,242.353479,5,6,2001
+174,T1,"1,..4-2019",2,8,Satisfactory,1,4,2,2,8,Satisfactory,Vocational,5,3,392.4140805,255.9696947,13,12,2002
+175,T1,"1,..4-2019",2,7,Satisfactory,3,4,2,2,7,Satisfactory,Higher education,4,2,400.8431493,237.3587074,20,6,2002
+176,T1,"1,..4-2019",2,7,Satisfactory,3,4,1,2,7,Satisfactory,Higher education,4,2,404.1734941,259.5965609,4,1,2002
+177,T1,"1,..4-2019",2,9,Excellent,1,3,2,2,9,Excellent,Secondary school (1-10 years),3,2,407.9592956,253.2892895,16,8,2002
+178,T1,"1,..4-2019",1,99,Satisfactory,2,3,1,1,99,Satisfactory,Vocational,2,1,392.2006797,253.7938589,20,10,2002
+179,T1,"1,..4-2019",2,7,Satisfactory,2,4,1,2,2,Satisfactory,Higher education,5,5,403.7827832,257.1508063,13,5,2002
+180,T1,"1,..4-2019",1,9,Excellent,3,4,2,1,9,Excellent,Higher education,4,2,398.3960055,252.9602579,6,9,2002
+181,T1,"1,..4-2019",2,7,Satisfactory,2,3,4,2,8,Satisfactory,Higher education,3,4,394.0860031,255.3689241,16,4,2002
+182,T1,"1,..4-2019",1,8,Satisfactory,99,6,2,1,8,Satisfactory,Secondary school (1-10 years),6,2,399.2254411,246.197854,15,8,2002
+183,T1,"1,..4-2019",2,6,Satisfactory,1,4,1,2,6,Satisfactory,Secondary school (1-10 years),4,1,399.1126867,247.9390058,26,9,2002
+184,T1,"1,..4-2019",2,7,Satisfactory,2,4,1,2,7,Satisfactory,Vocational,4,1,396.6470367,257.8112036,24,9,2002
+185,T1,"1,..4-2019",2,8,Excellent,3,6,3,2,8,Excellent,Higher education,6,3,396.3304001,265.6830427,6,4,2002
+186,T1,"1,..4-2019",1,9,Excellent,3,6,1,1,9,Excellent,Higher education,6,1,396.0189157,243.2903858,14,8,2002
+187,T1,"1,..4-2019",1,7,99,2,8,2,1,8,Excellent,Higher education,8,4,406.495505,270.9462897,15,9,2002
+188,T1,"1,..4-2019",2,8,Satisfactory,3,5,3,2,99,Satisfactory,Higher education,5,2,402.2864122,248.1815939,26,1,2002
+189,T1,"1,..4-2019",2,7,Excellent,1,3,3,2,99,Satisfactory,Higher education,4,1,404.7572115,248.8450742,12,4,2002
+190,T1,"1,..4-2019",1,9,Excellent,3,5,3,1,9,Excellent,Higher education,5,3,391.1658249,249.1747775,10,8,2002
+191,T1,"1,..4-2019",2,9,Excellent,2,3,1,2,9,Excellent,Vocational,3,1,405.6487556,251.7394664,11,2,2002
+192,T1,"1,..4-2019",2,10,Excellent,3,5,2,2,10,Excellent,Higher education,5,3,401.9486703,241.1655386,20,4,2002
+193,T1,"1,..4-2019",2,7,99,2,5,1,2,7,Satisfactory,Vocational,5,1,407.0406673,247.4352616,18,9,2002
+194,T1,"1,..4-2019",1,9,Excellent,3,5,3,1,9,Excellent,Higher education,5,3,399.3253991,260.4551893,15,11,2002
+195,T1,"1,..4-2019",2,4,Fair,2,4,1,2,7,Excellent,Higher education,4,1,395.6252485,244.4973934,11,1,2002
+196,T1,"1,..4-2019",2,100,Excellent,100,6,6,2,6,Satisfactory,Vocational,6,6,399.9230523,246.4785231,12,4,2002
+197,T1,"1,..4-2019",2,8,Satisfactory,2,5,1,2,7,Satisfactory,Vocational,5,2,397.5460089,263.257293,27,10,2002
+198,T1,"1,..4-2019",2,9,Excellent,2,3,2,2,9,Excellent,Vocational,3,2,405.9342581,235.6147329,18,1,2001
+199,T1,"1,..4-2019",2,7,Satisfactory,2,5,2,2,7,Satisfactory,Vocational,5,2,401.8149859,251.2259664,19,4,2002
+200,T1,"1,..4-2019",2,7,Satisfactory,3,4,4,2,9,Satisfactory,Higher education,4,4,390.0609365,226.2017911,12,8,2002
+201,T1,"1,..4-2019",2,9,Excellent,3,5,3,2,9,Excellent,Higher education,5,3,390.5503537,233.7695631,18,5,2002
+202,T1,"1,..4-2019",2,7,Satisfactory,3,3,3,2,8,Satisfactory,Higher education,3,4,400.1108295,260.4676244,14,5,2002
+203,T1,"1,..4-2019",2,9,Excellent,2,6,1,2,9,Excellent,Vocational,5,1,405.2095627,268.7869635,7,1,2001
+204,T1,"25,..2-2019",1,9,Excellent,3,5,2,1,9,Excellent,Higher education,5,3,402.4401143,255.8883343,12,7,2001
+205,T1,"25,..2-2019",1,98,98,3,5,2,1,99,100,Higher education,5,3,392.8886932,252.1065561,25,1,2001
+431,T1,"8,..4-2019",2,8,Satisfactory,3,5,4,2,7,Satisfactory,Higher education,4,5,410.896164,266.544046,6,4,2001
+432,T1,"8,..4-2019",2,9,99,99,99,99,2,99,Fair,Vocational,7,99,401.1536536,252.7761936,21,8,2001
+433,T1,"8,..4-2019",2,8,99,3,3,1,2,8,Fair,Higher education,3,4,403.4390541,248.4232675,11,1,2002
+434,T1,"8,..4-2019",2,99,99,99,4,3,2,99,Fair,Vocational,4,3,400.8801804,247.1679686,10,9,2001
+435,T1,"8,..4-2019",2,99,Fair,3,5,1,2,5,Fair,Higher education,5,2,396.4761073,247.7560528,25,6,2001
+436,T2,"19,..4-2019",1,99,99,3,99,99,1,8,Excellent,Higher education,4,99,409.260264,267.9888368,3,3,2001
+437,T2,"19,..4-2019",1,9,Satisfactory,3,5,1,1,9,Satisfactory,Higher education,5,1,400.2032767,252.2151954,7,12,2002
+438,T2,"19,..4-2019",1,9,Excellent,3,4,3,1,9,Excellent,Higher education,4,3,400.3034883,244.559932,18,11,2000
+439,T2,"19,..4-2019",1,8,Satisfactory,3,99,99,1,8,Satisfactory,Higher education,99,99,401.8920919,247.5123216,30,6,2002
+440,T2,"19,..4-2019",1,99,99,99,99,99,1,99,99,99,99,99,403.3162557,241.9398856,4,12,2001
+441,T2,"19,..4-2019",1,9,Excellent,1,5,1,1,9,Excellent,Secondary school (1-10 years),5,1,405.4835411,251.9230152,15,7,2002
+649,C,"5,..4-2019",2,8,99,99,4,0,2,8,Satisfactory,Higher education,4,99,400.2825705,265.0270778,22,8,2002
+650,C,"5,..4-2019",1,9,Excellent,3,5,5,1,9,Excellent,Higher education,5,5,403.3670511,269.9803913,30,8,2002
+651,C,"5,..4-2019",1,9,Excellent,1,4,2,1,9,Excellent,Vocational,4,2,398.9506227,238.9991894,22,12,2001
+652,C,"5,..4-2019",1,6,Satisfactory,2,4,1,1,6,Satisfactory,Secondary school (1-10 years),4,1,400.07149,261.9336161,14,8,2001
+653,C,"5,..4-2019",1,99,Satisfactory,2,6,2,1,6,Satisfactory,Higher education,6,3,401.3286523,251.2110185,6,1,2002
+654,C,"5,..4-2019",1,99,Satisfactory,3,4,2,1,99,Fair,Higher education,4,1,412.2034777,265.0233951,26,9,2002
+655,C,"5,..4-2019",1,8,99,3,2,1,1,8,Excellent,Higher education,2,1,399.2771004,251.1038512,24,4,2001
+1569,T1,"12,..4-2019",1,99,Satisfactory,3,2,2,1,99,Satisfactory,Higher education,2,2,400.51179,245.9384102,13,4,2003
+1570,T1,"12,..4-2019",2,8,99,100,99,99,2,7,Satisfactory,Higher education,4,3,398.5174358,234.9167392,7,12,2002
+1571,T1,"12,..4-2019",1,7,Satisfactory,1,5,4,1,7,Satisfactory,Vocational,5,4,403.4751388,259.2909527,1,10,2002
